@@ -1,0 +1,243 @@
+.containerTasks{
+  width: 100%;
+  min-height: 100%;
+  padding: -20px;
+
+}
+
+
+.todo{
+  background:#f8eae4;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+  opacity: 0.9;
+  width: 620px;
+  margin: 100px auto 20px;
+  padding: 10px 30px 40px;
+  border-radius: 30px;
+  transition: all 0.5s ease 0s;
+
+}
+
+
+.todo h2{
+  font-family: Philosopher,'Comic Neue';
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  background:#f8eae4;
+  color: rgba(127, 158, 179,1);
+  font-size: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  transition: all 0.5s ease 0s;
+}
+
+.todo h3{
+  font-family: Philosopher,'Comic Neue';
+  display: flex;
+  justify-content:left;
+  align-items: left;
+  background:#f8eae4;
+  color: rgba(127, 158, 179,1);
+  margin-left: 20px; /* Adjust the margin as needed */
+  font-size: 25px; /* Adjust the font size as needed */
+  padding-bottom: 30px;
+}
+
+.todo h2:hover {
+  background-color: #f8eae4;
+  text-shadow: 0 0 40px #aab2bab0, 0 0 40px #aab2bab0, 0 0 40px #aab2bab0;
+  color: #a3b2bb;
+}
+
+
+.todo h2 img{
+  background:#f8eae4;
+  width: 130px;
+  margin-right: 5px;
+  right: 0px;
+  /* padding-left: -15px; */
+}
+.row{
+ font-family: 'Comic Neue';
+ display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f8eae4 !important;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-bottom:25px ;
+}
+
+
+.addnewBtn{
+  font-family: 'Comic Neue';
+  border: none;
+  outline: none;
+  padding: 10px 50px;
+  width: 500px;
+  height: 50px;
+  background: rgba(126, 158, 179,1);
+  color:#faf5f2;
+  font-size: 18px;
+  align-content: center;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 40px;
+
+}
+
+
+.list li{
+  font-family: 'Comic Neue';
+  background: #f8eae4;
+  list-style: none;
+  font-size: 20px;
+  padding: 12px 8px 12px 50px ;
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  transform: translateX(30px);
+  color:#648397 ;
+   transition: all 0.5s ease 0s;
+}
+.list li:hover {
+  background-color: #f8eae4;
+  text-shadow: 0 0 40px #aab2bab0, 0 0 40px #aab2bab0, 0 0 40px #aab2bab0;
+  color: #a3b2bb;
+}
+
+.list li::before {
+  position: absolute;
+  content: '';
+  height: 27px;
+  width: 27px;
+  border-radius: 30%;
+  background-image: url(/images/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+
+.list li.checked {
+  text-decoration: line-through;
+}
+
+.list li.checked::before {
+  background-image: url(/images/checked.png);
+}
+
+.list li span{
+  /* background: #f8eae4; */
+  position: absolute;
+  right: 90px;
+  top: 6px;
+  padding-bottom:2px ;
+  width: 40px;
+  height: auto;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 40px;
+ color:rgb(163,178,187);
+}
+
+.list li span:hover {
+  background: #f8eae4;
+
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 20px;
+  width: 75%; /* Could be more or less, depending on screen size */
+  background-color: rgba(127, 158, 179,1);
+}
+.form-group{
+  padding: 25px;
+  margin: 15px;
+  font-size: 20px;
+  color: #ffff;
+}
+
+.form-group .form-control{
+  font-family: 'Comic Neue';
+  flex: 1;
+  border: none;
+  outline: none;
+  background: #e5d0c7ca;
+  width: 75%;
+  height: 50px;
+  padding: 20px;
+  font-weight: 14px;
+  border-radius: 40px;
+  color:#648397 ;
+}
+
+
+.submit-btn {
+  font-family: 'Comic Neue';
+  border: none;
+  outline: none;
+  width: 50%; /* Adjust width as needed */
+  height: 50px;
+  background: #e5d0c7ca;
+  color: #ffff;
+  font-size: 18px;
+  align-content: center;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 40px;
+  margin-left: 200px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+   
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Apply basic styles to the container */
+.scrollable-container {
+  max-height: 400px; /* Set a maximum height for the container */
+  margin: auto;
+  max-width: 800px;
+  overflow-y: auto; /* Enable vertical scroll if content exceeds the container height */
+  padding: 10px; /* Optional: Add padding for spacing */
+}
+
+/* Optional: Style for each item in the container */
+.scrollable-item {
+  padding: 5px;
+  
+}
+
